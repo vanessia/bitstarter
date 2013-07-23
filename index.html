@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>My First Bitstarter </title>
+    <title>No Empty TP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
@@ -70,9 +70,17 @@
         background-color: #343434;
         padding: 3% 0%;
       }
+
       .video, .thermometer, .order, .social, .statistics {
         text-align: center;
       }
+/*
+      .image{
+       max-width: 480px;
+       max-height: 300px;
+       display: block;
+      }
+*/
       .statistics h3, .statistics p {
         color: white;
       }
@@ -86,6 +94,20 @@
       .asset {
         padding: 2.5% 0%;
       }
+      
+      .perk {
+        margin-top: 20px;
+        font-style: italic;
+      }
+
+      @import 'bootstrap.less';
+      .pledge{
+        background-color: #CDCDCD;
+        padding: 3% 0%;
+        .border-radius(5px);
+        text-align: left;
+      }
+
       .footer {
         color: #cccccc;
         text-align: center;
@@ -111,7 +133,7 @@
 	  <span class="icon-bar"></span>
 	  <span class="icon-bar"></span>
 	</button>
-	<a class="brand" href="#">Bitstarter</a>
+	<a class="brand" href="#">SmartTP</a>
 	<div class="nav-collapse collapse">
 	  <ul class="nav">
 	    <li class="active"><a href="#">Home</a></li>
@@ -126,28 +148,50 @@
   <!-- We use row-fluid inside containers to achieve a resizable layout. --
   <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
   <!-- http://stackoverflow.com/a/12270322 -->
-  <div class="container">
+  <div class="container-fluid">
     <!-- Font and paired font of .heading .subheading and body from Google Fonts -->
     <!-- www.google.com/fonts/specimen/Ubuntu -->
     <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
     <div class="row-fluid heading">
       <div class="span12">
-	<h1>Product</h1>
+	<h1>Smart TP</h1>
       </div>
       <div class="row-fluid subheading">
 	<div class="span12">
 	  <!-- Special typography from Bootstrap for lead paragraph. -->
 	  <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-	  <p class="lead">One sentence description.</p>
+	  <p class="lead">The smart toilet paper monitoring system. No more embarrassement for you and your guests!</p>
 	</div>
       </div>
       <div class="row-fluid pitch">
-	<div class="span5 offset1 video">
-	  <img class="img-polaroid" src="http://placehold.it/480x300">
+	<div class="span6 offset1">
+	  <div class="row-fluid video">
+	    <img class="img-polaroid" src="http://placehold.it/480x300">
+	  </div>
+	  <div class="row-fluid body">
+	    <h3> Problem </h3>
+	    <p> You sat down on your toilet, and when you're done, you saw this:</p>
+	      <img class="img-polaroid" src="http://i.imgur.com/DVdP3QT.jpg" width="480px" height="300px">
+	    <p>
+	      PANIC! EMBARRASSMENT! ARGH!!!!
+	    </p>
+
+	    <h3>Solution</h3>
+	    <p> Introducing SmartTP - world's first mobile alert system for empty toilet paper rolls</p>
+	    <img class="img-polaroid" src="http://i.imgur.com/CizUxFw.jpg">
+	    <p>
+	    When you're low on paper, Smart TP will send you a text reminding you to change or buy more toilet paper. When you finally run out, it will send you another text. 
+	    </p>
+	    <p>
+	      Never be surprised and embarrassed again at your next bathroom visit!
+	    </p>
+	  </div>
 	</div>
-    
+ 
+	<!-- Right sidebar -->
 	<!-- We define a new 'actions' div to contain statistics, order, and share buttons. -->
-	<div class="span5 actions">
+	<div class="span5">
+	<div class="row-fluid actions">
 	  <div class="span8 offset2">
 	    <div class="statistics">
 	      <div class="span4">
@@ -188,31 +232,30 @@
 	    <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
 	  </div>
 	</div>
-      </div>
-  
-      <!-- Beyond this part the marketing copy begins. -->
-      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
-      <!-- http://twitter.github.io/bootstrap/base-cs.html#images -->
-      <!-- http://placehold.it -->
-      <div class="row-fluid section1">
-	<div class="span5 offset1 asset">
-	  <img class="img-polaroid" src="http://placehold.it/480x300">
+	<div class="row-fluid perk">
+	  <p>Select a perk for your contributions:</p>
 	</div>
-	<div class="span5 copy">
-	  <p>
-	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non quam ultricies sem faucibus posuere ac eu magna. Vestibulum pretium ligula sed nunc iaculis, semper condimentum urna dapibus. Sed et felis in ante congue bibendum. Nulla vitae ligula ac lorem dapibus scelerisque eget a nisl. Cras tempus lectus in augue malesuada suscipit. Curabitur ornare risus rutrum arcu facilisis volutpat. Nulla facilisi. Aliquam ornare justo diam, non varius nulla dictum at. Praesent fringilla diam et lacus suscipit, vitae molestie augue vehicula. In sed laoreet lorem. Curabitur nisl turpis, viverra in ornare ultrices, laoreet nec leo.
-	  </p>
+	<div class="row-fluid pledge">
+	  <div class="span10 offset1">
+	  <h3>$19 - Supporter</h3>
+	  <p>Get a NoEmptyTP sticker!</p>
+	  <hr>
+	  <h3>$49 - Tester</h3>
+	  <p>Get 1 SmartTP at this extraordinary discount price!</p>
+	  <hr>
+	  <h3>$98 - Innovator</h3>
+	  <p>Get 2 SmartTPs for the family at backer's discount!</p>
+	  <hr>
+	  <h3>$199 - Cannot Wait</h3>
+	  <p>4 Smart TPs with mobile alert - gift some to your family and friends that you visit often (hint hint)!</p>
+	  <hr>
+	  <h3>$500 - Want It Now</h3>
+	  <p>4 Smart TPs and a nice dinner with the founding team! We will tell you more bathroom stories that you want to know</p>
+	  <hr>
+	  <h3>$5000 - Want It Yesterday</h3>
+	  <p>4 Smart TPs, a nice dinner, and a seat on our board!</p>
+	  </div>
 	</div>
-      </div>
-      
-      <div class="row-fluid section2">
-	<div class="span5 offset1 copy copy-right">
-	  <p>
-	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non quam ultricies sem faucibus posuere ac eu magna. Vestibulum pretium ligula sed nunc iaculis, semper condimentum urna dapibus. Sed et felis in ante congue bibendum. Nulla vitae ligula ac lorem dapibus scelerisque eget a nisl. Cras tempus lectus in augue malesuada suscipit. Curabitur ornare risus rutrum arcu facilisis volutpat. Nulla facilisi. Aliquam ornare justo diam, non varius nulla dictum at. Praesent fringilla diam et lacus suscipit, vitae molestie augue vehicula. In sed laoreet lorem. Curabitur nisl turpis, viverra in ornare ultrices, laoreet nec leo.
-	  </p>
-	</div>
-	<div class="span5 asset">
-	  <img class="img-polaroid" src="http://placehold.it/480x300">
 	</div>
       </div>
       
@@ -239,7 +282,7 @@
 	    <div class="accordion-group">
 	      <div class="accordion-heading">
 		<a class="accordion-toggle" data-toggle="collapse" 
-		   data-parent="#accordion2" href="#collapseOne">
+		   data-parent="#accordion2" href="#collapseTwo">
 		  What's a Frequently Asked Question?
 		</a>
 	      </div>
